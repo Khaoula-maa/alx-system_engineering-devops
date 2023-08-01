@@ -1,6 +1,3 @@
 #!/usr/bin/env ruby
-#puts ARGV[0].scan(/\[([^S|A|B|F||u\]]+?)\]/).join(", ").scan(/<([^>]*)>/).last.first
-str = ARGV[0].scan(/\[([^\]([TFSu])]*)\]/).join(", ")
-str.split(/\w+:(.*), to:(.*), flags:(.*)/)
-puts str
-
+# A regular expression that is matches a given pattern
+puts ARGV[0].scan(/\[from:(.*?)\]\s\[to:(.*?)\]\s\[flags:(.*?)\]/).join(',')
